@@ -38,6 +38,34 @@ public class Principal {
 			System.out.println("Introdujo una opcion que no esta en el menu");
 		}
 		
+		if(resultado!=0&&opcion!=0) {
+			int opcion3=0;
+			do {
+				System.out.println("1-Sumar");
+				System.out.println("2-Restar");
+				System.out.println("3-Multiplicar");
+				System.out.println("4-Dividir");
+				System.out.println("0-Salir");
+				System.out.println("Que quiere hacer con el resultado");
+				System.out.println("Introduzca una opcion: ");
+				opcion3=leer.nextInt();
+			switch(opcion3) {
+				case 1:
+					resultado+=inter.suma(num1, num2);
+					break;
+				case 2:
+					resultado-=inter.resta(num1, num2);
+					break;
+				case 3:
+					resultado*=inter.multiplicacion(num1, num2);
+					break;
+				case 4:
+					resultado/=inter.division(num1, num2);
+					break;
+			}
+			}while(opcion3<0&&opcion>4);
+		}
+		else {
 		switch(opcion) {
 		case 1:
 			resultado+=inter.suma(num1, num2);
@@ -58,6 +86,7 @@ public class Principal {
 			resultado+=inter.exponente(num1, num2);
 			break;
 		}
+	}
 		if(opcion>0&&opcion<7) {
 			System.out.println("El resultado es: "+resultado);
 			int opcion2=0;
@@ -70,7 +99,6 @@ public class Principal {
 				resultado=0;
 			}while(opcion2!=1&&opcion2!=2);
 		}
-			
 		}while(opcion!=0);
 	}catch(InputMismatchException im) {
 		System.out.println("Error: Formato incorrecto "+im.getMessage());	
