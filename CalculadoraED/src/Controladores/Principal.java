@@ -62,7 +62,7 @@ public class Principal {
 			System.out.println("El resultado es: "+resultado);
 			int opcion2=0;
 			do {
-			System.out.println("¿Quieres guardar el resultado?");
+			System.out.println("¿Quieres guardar el resultado para la proxima cuenta?");
 			System.out.println("1-Si");
 			System.out.println("2-No");
 			opcion2=leer.nextInt();
